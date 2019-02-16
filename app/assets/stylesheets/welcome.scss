@@ -1,0 +1,91 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "semantic-ui";
+.column >  p {
+    font-size: 1.5em;
+    font-family: 'Crimson Text', serif;
+}
+h2{
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+
+#main-menu{
+    margin: 0;
+    width: 100%;
+    padding:10px 20px 10px 70px; 
+    background: #500000;
+    font-family: 'Oswald', sans-serif;
+}
+#secondary-menu{
+    margin: 0;
+    width: 100%;
+    font-size:25px;
+    font-family: 'Oswald', sans-serif;
+}
+#tertiary-menu{
+    margin: 0;
+    width: 100%;
+    background: #D3D3D3;
+    font-family: 'Oswald', sans-serif;
+    color:#003C71;
+
+
+}
+
+#department{
+    font-size:30px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.jumbotron {
+    width: 100%;
+}
+
+.ui.vertical.stripe{
+    padding: 100px 0 50px 0;
+}
+.column > .ui.header{
+   font-size: 3em;
+   padding: 0 0 0 0;
+   font-family: 'Oswald', sans-serif;
+   color:#003C71;
+}
+
+.ui .card {
+    font-family: 'Oswald', sans-serif;  
+}
+
+.ribbon.label {
+    background : #500000;
+ 
+}
+
+.content{
+     
+    font-size: 1.5em;
+    font-family: 'Oswald', sans-serif; 
+}
+
+.description{
+    font-size: 1.2em;
+}
+
+.quote.stripe.segment {
+    padding: 0em;
+}
+
+.quote.stripe.segment .grid  {
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.footer.segment {
+      padding: 5em 0em;
+      color:white;
+}
+
