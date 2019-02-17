@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import "semantic-ui";
+
 .column >  p {
     font-size: 1.5em;
     font-family: 'Crimson Text', serif;
@@ -10,8 +11,6 @@
 h2{
     font-family: 'Oswald', sans-serif;
 }
-
-
 
 
 #main-menu{
@@ -35,6 +34,12 @@ h2{
     color:#003C71;
 
 
+}
+
+.breadcrumb{
+    padding: 10px 10px 10px 30px;
+    background: #D6D3C4;
+    width: 100%;
 }
 
 #department{
