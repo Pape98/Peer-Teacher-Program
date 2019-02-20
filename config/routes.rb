@@ -8,4 +8,9 @@ Rails.application.routes.draw do
   get '/confirm-account', :to => 'welcome#confirm'
   get '/application/instructions', :to => 'welcome#instructions'
 
+    get 'welcome/index'
+
+
+  
+
 end
