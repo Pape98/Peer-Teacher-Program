@@ -1,3 +1,1 @@
-$('body').click(function(){
-	alert("pape");
-});
+alert("Hello! I am an alert box!!");

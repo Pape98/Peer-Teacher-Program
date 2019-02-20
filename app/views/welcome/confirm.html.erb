@@ -1,0 +1,46 @@
+
+<%= stylesheet_link_tag '/stylesheets/welcome/login' %>
+
+<div class="ui middle aligned center aligned grid">
+	<div class="row">
+		<div class="column">
+  
+     <%= image_tag("TAM-LogoBox.png", class:"ui small centered image") %>
+
+     <h1>Confirm Account & Set Password</h1>
+    <div class="ui segments">
+    	<div class="ui segment">
+    		
+      	<form class="ui large form">
+        <div class="field">
+          <label>Email Address</label>
+          <div class="ui left icon input">
+            <i class="user maroon icon"></i>
+            <input type="text" name="email" placeholder="E-mail address">
+          </div>
+        </div>
+        <div class="field">
+          <label>Set Password</label>
+          <div class="ui left icon input">
+            <i class="lock maroon icon"></i>
+            <input type="password" name="password" placeholder="Password">
+          </div>
+        </div>
+        <div class="ui fluid maroon large submit button">Login</div>
+        </form>
+      </div>
+      <div class="ui segment" id ="bottomSegment">
+      	<p class="">
+	      New to us? <a href="#">Confirm Account</a>
+	    </p>
+      </div>
+    </div>
+    <div class="row">
+    	<p><a href="/"><u>Return to Home Page</u></a></p>
+    </div>
+	</div>
+  
+  </div>
+</div>
+</body>
+</html>

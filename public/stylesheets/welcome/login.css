@@ -1,0 +1,36 @@
+body {
+  background-color: #D6D3C4;
+}
+body > .grid {
+  height: 100%;
+  font-family: 'Oswald', sans-serif;
+}
+
+.column {
+  max-width: 450px;
+}
+
+form{
+  padding: 25px 25px 25px 25px;
+}
+h2{
+  padding-top: 15px;
+}
+
+#bottomSegment{
+  background: #f5f5f5;
+}
+
+#topSegment{
+  background: ;
+}
+
+h1{
+	font-family: 'Oswald', sans-serif; 
+}
+
+p > a{
+	color:#500000;
+	font-family: 'Oswald', sans-serif;
+}
+

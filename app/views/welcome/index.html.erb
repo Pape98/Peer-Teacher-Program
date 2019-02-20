@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Home - Peer Teaching</title>
+
+    <%= stylesheet_link_tag '/stylesheets/welcome/index' %>
+    
     
     <%= render 'landingMenu' %>
     <%= image_tag("peer-teachers-web.jpg", alt: "Peer Teachers" , class:"jumbotron" )%>
+    <div class="ui breadcrumb">
+      <span class="section"></span>
+    </div>
+
     <div class="ui container vertical stripe quote segment">
         <div class="ui stackable grid container">
         
@@ -13,7 +15,7 @@
           <div class="five wide column">
           <div class="ui card">
           <div class="image">
-            <%= image_tag("TeresaLeyk.jpeg") %>
+            <%= image_tag("TeresaLeyk.jpeg", class:"centered image") %>
             <div class="ui inverted small top ribbon label">CSCE</div>
           </div>
           <div class=" content" style="background: #D6D3C4;">
