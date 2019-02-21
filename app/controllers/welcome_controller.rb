@@ -17,5 +17,4 @@ class WelcomeController < ApplicationController
   def instructions
     @page ='instructions'
   end 
-
 end

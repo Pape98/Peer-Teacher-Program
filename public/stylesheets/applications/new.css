@@ -1,0 +1,15 @@
+body{
+	background-color:#500000;
+}
+
+.ui.container{
+	margin: 100px !important;
+}
+
+.ui.segments{
+	max-width: 750px;
+}
+
+.ui.dividing.header{
+	margin-top: 20px;
+}

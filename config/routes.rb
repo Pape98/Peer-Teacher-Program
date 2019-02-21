@@ -6,11 +6,8 @@ Rails.application.routes.draw do
   get '/people', :to => 'welcome#people'
   get '/login', :to => 'welcome#login'
   get '/confirm-account', :to => 'welcome#confirm'
-  get '/application/instructions', :to => 'welcome#instructions'
+  get '/instructions', :to => 'welcome#instructions'
 
-    get 'welcome/index'
-
-
-  
-
+# ------------ APPLICATION CONTROLLER ----------- 
+  resources :applications
 end

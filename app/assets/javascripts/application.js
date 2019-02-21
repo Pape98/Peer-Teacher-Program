@@ -15,8 +15,7 @@
 
 //= require jquery
 //= require jquery_ujs
-//= require semantic-ui
-//= require welcome.js
+//= require semantic-ui/dropdown
 //= require_tree .
 
 
