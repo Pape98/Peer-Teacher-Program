@@ -5,18 +5,21 @@ class ApplicationsController < ApplicationController
 	end
 
 	def applicant_params
-		#require(:applicant)
-		params.permit(
-			:first_name,
-			:last_name,
-			:email,
-			:uin,
-			:phone_number,
-			:graduation_date,
-			:gpa,
+		#params.require(:applicant).
+        params.permit(
+            :first_name,
+        :last_name,
+        :email,
+        :phone_number,
+        :uin,
+        :graduation_date,
+        :gpa,
 			# :major,
 			# :csce_class,
 	    # :comment
+      # :resume,
+      # :transcript,
+      # :schedule
 		)
 
 		# #School Information
@@ -27,20 +30,18 @@ class ApplicationsController < ApplicationController
 	end
 
 	def new
-		@applicants = ""
+		@applicant = Applicant.new
 	end
 
 	def show
-		#@applicants = Applicant.all
+
 	end
 
 	def create
-		@applicant = Applicant.new(applicant_params)
-		@applicant.save
-		#flash[:notice] = "#{@applicant.first_name}, your was successfully created."
-		#redirect_to url_for(:controller => 'welcome', :action => 'index')
+		@applicant = Applicant.create!(applicant_params)
 
-		redirect_to url_for(:controller => 'applications', :action => 'index')
+		session[:success] = "#{@applicant.first_name}, your application was successfully created and submitted."
+		redirect_to url_for(:controller => 'welcome', :action => 'view_status')
 	end
 
 	def update

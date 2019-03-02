@@ -1,0 +1,25 @@
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>UIN</th>
+    <th>phone_number</th>
+    <th>graduation_date</th>
+    <th>gpa</th>
+  </tr>
+<% @applicants.each_with_index do |applicant, i| %>
+  <tr>
+    <td><%= applicant.first_name %><td>
+    <td><%= applicant.last_name %></td>
+    <td><%= applicant.email %></td>
+    <td><%= applicant.uin %></td>
+    <td><%= applicant.phone_number %></td>
+    <td><%= applicant.graduation_date %></td>
+    <td><%= applicant.gpa %></td>
+    <td><%= button_to "Delete", application_path(applicant), method: "delete" %></td>
+  </tr>
+<% end %>
+
+</table>

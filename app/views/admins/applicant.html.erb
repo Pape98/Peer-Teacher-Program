@@ -1,0 +1,97 @@
+<%= render 'adminMenu' %>
+
+
+
+<div class="ui center aligned container">
+  <h2 class="ui icon header">
+    <i class="circular user  icon"></i>
+    <div class="content">
+      <%=@applicant.first_name %> <%=@applicant.last_name %>
+      <div class="sub header">All of the applications are located here. Click on 'View' to look at an individual one.</div>
+    </div>
+  </h2>
+</div>
+
+
+<div class="ui container grid" style="margin-top: 20px !important;">
+  <div class ="two column row">
+    <div class="column">
+      <table class="ui padded definition table">
+
+        <tbody>
+        <tr>
+          <td>First Name</td>
+          <td><%=@applicant.first_name %></td>
+
+        </tr>
+        <tr>
+          <td>Last Name</td>
+          <td><%=@applicant.last_name %></td>
+        </tr>
+        <tr>
+          <td>Email Address</td>
+          <td><%=@applicant.email %></td>
+        </tr>
+        <tr>
+          <td>Phone Number</td>
+          <td><%=@applicant.phone_number %></td>
+        </tr>
+        </tbody></table>
+    </div>
+    <div class="column">
+      <table class="ui padded definition table">
+        <tbody>
+        <tr>
+          <td>UIN</td>
+          <td><%=@applicant.uin %></td>
+
+        </tr>
+        <tr>
+          <td>Major</td>
+          <td><%=@applicant.last_name %></td>
+        </tr>
+        <tr>
+          <td>Grade Point Average</td>
+          <td><%=@applicant.email %></td>
+        </tr>
+        <tr>
+          <td>Graduation Year</td>
+          <td><%=@applicant.phone_number %></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class ="two column row">
+    <div class="column">
+      <table class="ui padded definition table">
+
+        <tbody>
+        <tr>
+          <td>Can peer teach for?</td>
+          <td><%=@applicant.first_name %></td>
+
+        </tr>
+        <tr>
+          <td>Additional Comment</td>
+          <td><%=@applicant.last_name %></td>
+        </tr>
+        </tbody></table>
+    </div>
+    <div class="ui center aligned column">
+      <h2>Click to download file</h2>
+      <div class="ui  basic primary  buttons">
+        <button class="ui button">Resume</button>
+        <button class="ui button">Schedule</button>
+        <button class="ui button">Transcript</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<%= image_tag @applicant.resume %>
+
+
+

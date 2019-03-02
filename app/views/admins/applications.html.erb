@@ -1,6 +1,6 @@
 <%= render 'adminMenu' %>
 
-<div class="ui center aligned container" style="padding: 50px 0 30px 0">
+<div class="ui center aligned container" style="padding: 0px 0 30px 0">
   <div class="ui category search">
     <div class="ui fluid action input">
       <input type="text" placeholder="Search...">
@@ -10,8 +10,18 @@
   </div>
 </div>
 
+<div class="ui center aligned container">
+<h2 class="ui  icon header">
+  <i class="circular users icon"></i>
+  <div class="content">
+     Submitted Applications
+    <div class="sub header">All of the applications are located here. Click on 'View' to look at an individual one.</div>
+  </div>
+</h2>
+</div>
+
 <div class="ui container" style="padding: 40px">
-  <table class="ui very basic table">
+  <table class="ui very basic  striped table ">
     <thead>
     <tr>
       <th>First Name</th>
@@ -20,26 +30,28 @@
       <th>Graduation Year</th>
       <th>Email</th>
       <th></th>
+
       <th style="color:red"><div class="ui basic red button">Delete</div></th>
     </tr>
     </thead>
     <tbody>
+    <% @applicants.each_with_index do |applicant, i| %>
     <tr>
-      <td>Pape Sow</td>
-      <td>Traore</td>
-      <td>525002291</td>
-      <td>2020</td>
-      <td><a href="mailto:traorefly@tamu.edu">traorefly@tamu.edu</a></td>
-      <td><a href=""><div class="ui basic primary button">View</div></a></td>
-      <td>
-        <div class="ui toggle checkbox">
-          <input type="checkbox" name="newsletter">
-          <label></label>
+      <td><%= applicant.first_name %></td>
+      <td><%= applicant.last_name %></td>
+      <td><%= applicant.uin %></td>
+      <td><%= applicant.email %></td>
+      <td><%= applicant.graduation_date %></td>
+      <td><a href="/admin/view/app/<%=applicant.id %>"><div class="ui basic primary button">View </div> </a></td>
+      <td class="collapsing">
+        <div class="ui fitted slider checkbox">
+          <input type="checkbox"> <label></label>
         </div>
       </td>
     </tr>
+    <% end %>
     </tbody>
   </table>
 </div>
 
-<%=@apps %>
+

@@ -17,4 +17,10 @@ class WelcomeController < ApplicationController
   def instructions
     @page ='instructions'
   end
+
+  def view_status
+    render 'status'
+    session[:success] = nil;
+  end
+
 end

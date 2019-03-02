@@ -1,0 +1,24 @@
+
+<%= render 'landingMenu' %>
+
+<div class="ui breadcrumb">
+  <span class="section">Home</span>
+  <span class="divider">/</span>
+  <span class="section"><b>View Application Status</b></span>
+</div>
+  <%if session[:success] != nil %>
+    <div class="ui container">
+      <div class="ui positive icon message">
+        <i class="close icon"></i>
+        <i class="checkmark icon"></i>
+        <div class="content">
+          <div class="header">
+            <%=session[:success] %>
+          </div>
+          <p>You can now monitor your application status on this page by providing your email address.</p>
+        </div>
+      </div>
+    </div>
+    <%end %>
+
+<%= render 'landingFooter' %>

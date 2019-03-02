@@ -1,11 +1,13 @@
 <%= stylesheet_link_tag '/stylesheets/applications/new' %>
 </head>
 <body>
+
 <div class="ui container">
 <div class="ui  middle aligned center aligned grid">
   <div class="row">
     <div class="ui segments">
-      <div class="ui segment" id ="headerSegment" style="background:#D6D3C4">
+      <div class="ui left aligned padded segment" id ="headerSegment" style="background:#D6D3C4">
+        <%#= image_tag("TAM-Logo-white.png", class:"ui  small  image") %>
         <h1>Peer Teacher Application</h1>
       </div>
       <div class="ui segment">
@@ -16,7 +18,7 @@
       <div class="ui segment">
 
         <!-- Start of from -->
-        <%= form_for @applicants, url: {action: "create"}, html: {class: "ui form"} do |f| %>
+        <%= form_for @applicant, direct_upload: true, url: {action: "create"}, html: {class: "ui form"} do |f| %>
 
           <h4 class="ui dividing header">Personal Information</h4>
           <div class= "ui two required fields">
@@ -86,28 +88,16 @@
 
           <div class="required field">
             <label>Classes you can peer teach for</label>
-            <!-- <select name="states" class="ui selection dropdown" multiple="" id="multi-select">
-              <option value="CSCE-110">CSCE-110</option>
-              <option value="AF">CSCE-111</option>
-              <option value="AX">CSCE-121</option>
-              <option value="AL">CSCE-206</option>
-              <option value="DZ">CSCE-221</option>
-              <option value="AS">CSCE-222</option>
-              <option value="AD">CSCE-312</option>
-              <option value="YE">CSCE-313</option>
-              <option value="ZM">CSCE-314</option>
-              <option value="ZW">CSCE-315</option>
-            </select> -->
             <%= select("post", "csce_class", csce_classes, {:id => 'multi-select', :class => 'ui selection dropdown'})%>
 
 
             <h4 class="ui dividing header">Documents To Upload</h4>
 
             <div class="ui three required fields">
-              <div class="field">
-                <label>Resume (.pdf)</label>
-                <input type="file" name="resume" placeholder="First Name" accept=".pdf">
-              </div>
+<!--              <div class="field">-->
+<!--                <label>Resume (.pdf)</label>-->
+<!--                <input type="file" name="resume" placeholder="First Name" accept=".pdf">-->
+<!--              </div>-->
               <div class="field">
                 <label>Transcript (.pdf)</label>
                 <input type="file" name="transcript" placeholder="Last Name" accept=".pdf">
@@ -124,6 +114,10 @@
               <label></label>
               <textarea name="comment"></textarea>
             </div>
+            <div class="field">
+              <%= label_tag :resume %>
+              <%= file_field_tag :resume %>
+            </div>
 
             <button class="ui button" type="submit">Submit</button>
 
@@ -134,6 +128,10 @@
       </div>
     </div>
   </div>
+</div>
+</div>
 
-</div>
-</div>
+
+
+
+
