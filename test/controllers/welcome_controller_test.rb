@@ -6,4 +6,11 @@ class WelcomeControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  Rspec.describe "GET index" do
+    it "assigns index as @page" do
+      get :index
+      assigns(:page).should eq('index')
+    end
+  end
+
 end

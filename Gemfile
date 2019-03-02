@@ -32,8 +32,6 @@ gem 'jquery-rails'
 # Use jquery as HTML/CSS framework
 gem 'semantic-ui-sass'
 
-gem 'sqlite3','~> 1.3.13'
-
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -47,6 +45,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem "rspec-rails"
+  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -56,6 +56,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'sqlite3','~> 1.3.13'
 end
 
 group :test do
@@ -66,9 +67,31 @@ group :test do
   gem 'chromedriver-helper'
 end
 
+group :production do
+  gem 'pg', '~> 0.21' # for Heroku deployment
+  gem 'rails_12factor'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "bcrypt", "~> 3.1"
 
 gem "jwt", "~> 2.1"
+
+#Added for rspec testing - DL
+group :development, :test do
+  #call bye bug
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
+  gem 'rails-controller-testing'
+end
+
+#Added for Cucumber testing - DL
+group :test do
+  gem 'cucumber-rails', require: false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+end
+
+gem 'simplecov', require: false, group: :test
