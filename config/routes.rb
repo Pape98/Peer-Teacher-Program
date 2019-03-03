@@ -21,7 +21,9 @@ Rails.application.routes.draw do
 
 # ------------ ADMINS CONTROLLER -----------
   get '/admin/home', :to => 'admins#home'
-  get '/admin/view/applications', :to => 'admins#show_applications'
-  get '/admin/view/app/:id', :to => 'admins#show_one_app'
+  get '/admin/applications', :to => 'admins#show_applications'
+  get '/admin/applications/:id', :to => 'admins#show_one_app'
+  get '/admin/documents', :to => 'admins#documents'
+  get '/admin/settings', :to => 'admins#settings'
 
 end

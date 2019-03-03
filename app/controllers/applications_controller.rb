@@ -14,9 +14,9 @@ class ApplicationsController < ApplicationController
         :uin,
         :graduation_date,
         :gpa,
-			# :major,
-			# :csce_class,
-	    # :comment
+				:major,
+				:csce_class,
+	    	:comment
       # :resume,
       # :transcript,
       # :schedule

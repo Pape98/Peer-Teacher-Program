@@ -1,6 +1,7 @@
-
-$(document ).on('turbolinks:load', function() {
-  	$('#multi-select')
-  .dropdown()
-}
-
+$( document ).ready(function() {
+    $('.ui.sticky')
+        .sticky({
+            context: '#context'
+        })
+    ;
+});
