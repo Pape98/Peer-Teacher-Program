@@ -9,20 +9,21 @@
     width: 100%;
     padding:10px 20px 10px 70px; 
     background: #500000;
+    font-size:18px !important;
     font-family: 'Oswald', sans-serif;
 }
 #secondary-menu{
     margin: 0;
     width: 100%;
-    font-size:25px;
+    font-size:30px;
     font-family: 'Oswald', sans-serif;
 }
 #tertiary-menu{
     margin: 0;
     width: 100%;
-    background: #D6D3C4;
+    background: #500000;
     font-family: 'Oswald', sans-serif;
-    color:#003C71;
+    color:white;
 
 
 }
@@ -45,7 +46,7 @@
 
 .jumbotron {
     width: 100%;
-    height: 55%;
+    max-height: 400px;
 }
 
 

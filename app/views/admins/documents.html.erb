@@ -1,1 +1,48 @@
 <%= render 'adminMenu' %>
+
+<div class="ui center aligned container" style="margin:40px 0 40px 0">
+  <h2 class="ui  icon header">
+    <i class="circular maroonyellow upload icon"></i>
+    <div class="content">
+       Documents
+      <div class="sub header">All of the documents are also located here and can be downloaded</div>
+    </div>
+  </h2>
+</div>
+
+<div class="ui container">
+  <table class="ui selectable celled striped table">
+    <thead>
+    <tr><th colspan="3">
+      Documents
+    </th>
+    </tr>
+    </thead>
+    <thead>
+    <tr>
+      <th>Applicant Name</th>
+      <th>File Name</th>
+      <th>Download</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td class="collapsing">
+        <i class="folder icon"></i> node_modules
+      </td>
+      <td>Initial commit</td>
+      <td class="right aligned collapsing">10 hours ago</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="folder icon"></i> test
+      </td>
+      <td>Initial commit</td>
+      <td class="right aligned">10 hours ago</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<%= render 'adminFooter' %>

@@ -1,18 +1,23 @@
 <%= render 'adminMenu' %>
 
-<div class="ui center aligned container" style="padding: 0px 0 30px 0">
-  <div class="ui category search">
-    <div class="ui fluid action input">
-      <input type="text" placeholder="Search...">
-      <button class="ui maroon button">Search</button>
+<%if flash[:notice]!= nil %>
+    <div class="ui container" style="margin: 30px 0 30px 0">
+      <div class="ui positive icon message">
+        <i class="checkmark icon"></i>
+        <i class="close icon"></i>
+        <div class="content">
+          <div class="header">
+            <%=flash[:notice]%>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="results"></div>
-  </div>
-</div>
+<%end %>
 
-<div class="ui center aligned container">
+
+<div class="ui center aligned container" style="margin:40px 0 40px 0">
 <h2 class="ui  icon header">
-  <i class="circular users icon"></i>
+  <i class="circular maroonyellow users icon"></i>
   <div class="content">
      Submitted Applications
     <div class="sub header">All of the applications are located here. Click on 'View' to look at an individual one.</div>
@@ -21,7 +26,7 @@
 </div>
 
 <div class="ui container" style="padding: 40px">
-  <table class="ui very basic  striped table ">
+  <table class="ui selectable very basic  striped table ">
     <thead>
     <tr>
       <th>First Name</th>
@@ -30,8 +35,7 @@
       <th>Graduation Year</th>
       <th>Email</th>
       <th></th>
-
-      <th style="color:red"><div class="ui basic red button">Delete</div></th>
+      <th></th>
     </tr>
     </thead>
     <tbody>
@@ -42,16 +46,12 @@
       <td><%= applicant.uin %></td>
       <td><%= applicant.email %></td>
       <td><%= applicant.graduation_date %></td>
-      <td><a href="/admin/applications/<%=applicant.id %>"><div class="ui basic primary button">View </div> </a></td>
-      <td class="collapsing">
-        <div class="ui fitted slider checkbox">
-          <input type="checkbox"> <label></label>
-        </div>
-      </td>
+      <td><a href="/admin/applications/<%=applicant.id%>"><div class="ui basic primary button">View </div> </a></td>
+      <td><a rel="nofollow" data-method="delete" href="/applications/<%=applicant.id%>"><i class="red close icon"></i></a></td>
     </tr>
     <% end %>
     </tbody>
   </table>
 </div>
-
+<%= render 'adminFooter' %>
 

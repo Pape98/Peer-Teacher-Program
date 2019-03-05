@@ -34,13 +34,12 @@ class ApplicationsController < ApplicationController
 	end
 
 	def show
-
 	end
 
 	def create
 		@applicant = Applicant.create!(applicant_params)
 
-		session[:success] = "#{@applicant.first_name}, your application was successfully created and submitted."
+		session[:success] = "Thank your four submission, #{@applicant.first_name}! Your application has successfully been created and submitted."
 		redirect_to url_for(:controller => 'welcome', :action => 'view_status')
 	end
 
@@ -51,7 +50,28 @@ class ApplicationsController < ApplicationController
 		@applicant = Applicant.find(params[:id])
 		@applicant.destroy
 		flash[:notice] = "Applicant '#{@applicant.first_name}' '#{@applicant.last_name}' deleted."
-		redirect_to applications_path
+
+		redirect_to url_for(:controller => 'admins', :action => 'show_applications')
+	end
+
+	def change_status
+		@applicant = Applicant.find params[:id]
+		code = params[:code]
+		case code
+		when 'pending'
+			session[:status_change] = "#{@applicant.first_name}'s application status has successfully been set to : PENDING."
+			@applicant.update_attribute(:status,0)
+		when 'approve'
+			session[:status_change] = "#{@applicant.first_name}'s application status has successfully been set to : APPROVED."
+			@applicant.update_attribute(:status,1)
+		when 'deny'
+			session[:status_change] = "#{@applicant.first_name}'s application status has successfully been set to : DENIED."
+			@applicant.update_attribute(:status,2)
+		when 'missing'
+			session[:status_change] = "#{@applicant.first_name}'s application status has successfully been set to : INCOMPLETE."
+			@applicant.update_attribute(:status,3)
+		end
+		redirect_to request.referrer
 	end
 
 end

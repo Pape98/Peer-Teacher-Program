@@ -1,10 +1,23 @@
 <%= render 'adminMenu' %>
-
-<div class="ui  internally celled grid" style="height: 100%">
-  <div class="thirteen wide column">
+<div class="ui stackable internally celled grid" style="width: 100%">
+  <div class="thirteen wide column" style="margin-top: 30px">
+    <%if session[:status_change] != nil %>
+      <div class="row">
+        <div class="ui container" style="margin-bottom: 30px">
+          <div class="ui <%=@color %> message">
+            <i class="close icon"></i>
+            <div class="content">
+              <div class="header">
+                <%=session[:status_change]%>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <%end %>
     <div class="ui center aligned container">
       <h2 class="ui icon header">
-        <i class="circular user  icon"></i>
+        <i class="circular maroonyellow user  icon"></i>
         <div class="content">
           <%=@applicant.first_name %> <%=@applicant.last_name %>
           <div class="sub header">All of the applications are located here. Click on 'View' to look at an individual one.</div>
@@ -12,8 +25,8 @@
       </h2>
     </div>
 
-    <div class="ui container grid" style="margin-top: 20px !important;">
-      <div class ="two column row">
+    <div class="ui container grid" style="margin-top: 20px !important;" id="context">
+      <div class ="two column row" >
         <div class="column">
           <table class="ui padded definition table">
 
@@ -79,38 +92,97 @@
             </tbody></table>
         </div>
       </div>
+      <div class="row">
+        <h3 class="ui dividing header" style="width: 100%">
+          Transcript
+        </h3>
+      </div>
+      <div class="row">
+        <div class="ui center aligned  column ">
+          <object width="600" height="600" data="https://www.scholarshipgold.com/wp-content/uploads/2014/03/Sample-Transcript.pdf"></object>
+        </div>
+      </div>
+      <div class="row">
+        <h3 class="ui dividing header" style="width: 100%">
+          Schedule
+        </h3>
+      </div>
+      <div class="row">
+        <div class="ui center aligned  column ">
+          <object width="600" height="600" data="https://writing.colostate.edu/guides/documents/resume/functionalSample.pdf"></object>
+        </div>
+      </div>
+      <div class="row">
+        <h3 class="ui dividing header" style="width: 100%">
+          Resume
+        </h3>
+      </div>
+      <div class="row">
+        <div class="ui center aligned  column ">
+          <object width="600" height="600" data="https://writing.colostate.edu/guides/documents/resume/functionalSample.pdf"></object>
+        </div>
+      </div>
 
     </div>
   </div>
-  <div class="ui center aligned three wide column" style="background:#F5F5F5; margin-top: -45px">
-    <h4>Application Status</h4>
-    <div class="ui medium yellow label"><i class="attention icon"></i> Pending Review</div>
-    <h4>Update Status</h4>
-    <div class="ui secondary vertical menu">
-      <a class="item" style="color:green">
-         <b>Approve</b>
+  <div class="ui container center aligned three wide column" >
+    <div class="ui sticky two">
+      <a class="item"href="/admin/applications">
+        <div class="ui  maroon animated button" tabindex="0">
+          <div class="visible content">Return to Applications</div>
+          <div class="hidden content">
+            <i class="left arrow icon"></i>
+          </div>
+        </div>
       </a>
-      <a class="item" style="color:red">
-        <b>Deny</b>
-      </a>
-      <a class="item" style="color:orange">
-         <b>Missing Info</b>
-      </a>
-    </div>
-    <h4>Click to download file</h4>
-    <div class="ui secondary vertical menu">
-      <a class="item">
-        Resume
-      </a>
-      <a class="item">
-        Transcript
-      </a>
-      <a class="item">
-        Schedule
-      </a>
+      <div class="ui divider"></div>
+      <h4 style="margin-top: 25px">Application Status</h4>
+      <div class="ui big  <%=@color%> label"><%=@applicant.status %></div>
+
+
+      <div class="ui center aligned secondary vertical accordion menu">
+
+        <div class="item">
+          <a class="title">
+            <div class="ui maroon button">  <i class="dropdown icon"></i>Update Status</div>
+          </a>
+          <div class=" content">
+            <a class="item"><div class="ui divider"></div></a>
+            <a class="item" href="/admin/applications/<%=@applicant.id%>/approve">
+              <div class="ui basic green button">Approve</div>
+            </a>
+            <a class="item" href="/admin/applications/<%=@applicant.id%>/deny">
+              <div class="ui basic red button">Deny</div>
+            </a>
+            <a class="item" href="/admin/applications/<%=@applicant.id%>/missing">
+              <div class="ui basic orange button">Incomplete</div>
+            </a>
+            <a class="item" href="/admin/applications/<%=@applicant.id%>/pending">
+              <div class="ui basic yellow button">Pending</div>
+            </a>
+          </div>
+
+      </div>
+
+      <div class="ui divider"></div>
+      <h4>Download File</h4>
+      <div class="ui secondary vertical menu">
+        <a class="item">
+          Resume
+        </a>
+        <a class="item">
+          Transcript
+        </a>
+        <a class="item">
+          Schedule
+        </a>
+
+      </div>
+
     </div>
   </div>
 </div>
+  <%= render 'adminFooter' %>
 
 
 

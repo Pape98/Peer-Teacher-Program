@@ -1,4 +1,11 @@
 class AdminsController < ApplicationController
+
+  before_action :set_applicants
+
+  def set_applicants
+    @applicants = Applicant.all
+  end
+
   def home
     make_tab_active 1
     render 'home'
@@ -12,7 +19,9 @@ class AdminsController < ApplicationController
 
   def show_one_app
     @applicant = Applicant.find(params[:id])
+    @color = update_status_color @applicant.status
     render 'applicant'
+    session[:status_change] = nil
   end
 
   def documents
@@ -37,4 +46,18 @@ class AdminsController < ApplicationController
       @active = 'settings'
     end
   end
+
+  def update_status_color status
+    case status
+    when 'Pending'
+      return'yellow'
+    when 'Approved'
+      return 'green'
+    when 'Denied'
+      return 'red'
+    when 'Incomplete'
+      return 'orange'
+    end
+  end
+
 end
