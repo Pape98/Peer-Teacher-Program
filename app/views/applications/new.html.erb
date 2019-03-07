@@ -7,8 +7,13 @@
   <div class="row">
     <div class="ui segments">
       <div class="ui left aligned padded segment" id ="headerSegment" style="background:#D6D3C4">
-        <%#= image_tag("TAM-Logo-white.png", class:"ui  small  image") %>
-        <h1>Peer Teacher Application</h1>
+
+        <h1 class="ui header">
+          <%= image_tag("TAM-Stack.png", class:"ui image") %>
+          <div class="content">
+            Peer Teacher Application
+          </div>
+        </h1>
       </div>
       <div class="ui segment">
         <p>This form is a job application for the peer teaching program in the Computer Science and Engineering Department.</p>
@@ -35,11 +40,11 @@
           <div class= "ui two  required fields">
             <div class="field">
               <label>Email Address</label>
-              <input type="text" name="email" placeholder="First Name">
+              <input type="text" name="email" placeholder="Email Address">
             </div>
             <div class="field">
               <label>UIN</label>
-              <input type="text" name='uin' placeholder="Last Name">
+              <input type="text" name='uin' placeholder="School UIN">
             </div>
           </div>
 
@@ -47,18 +52,18 @@
           <div class= "ui two required fields">
             <div class="field">
               <label>Phone Number</label>
-              <input type="text" name="phone_number" placeholder="First Name">
+              <input type="text" name="phone_number" placeholder="Phone Number">
             </div>
             <div class="field">
               <label>Graduation Year</label>
-              <input type="text" name="graduation_date" placeholder="Last Name">
+              <input type="text" name="graduation_date" placeholder="Graduation Year">
             </div>
           </div>
 
           <div class= "ui two required fields">
             <div class="field">
               <label>GPA</label>
-              <input type="text" name="gpa" placeholder="First Name">
+              <input type="text" name="gpa" placeholder="Current GPA">
             </div>
           </div>
 
@@ -88,7 +93,7 @@
 
           <div class="required field">
             <label>Classes you can peer teach for</label>
-            <select placeholder="First name" multiple="" class="ui select dropdown" name="post[csce_class]" id="post_csce_class" class="ui selection dropdown">
+            <select  placeholder="First name" multiple="" class="ui select dropdown" name="csce_classes" id="post_csce_classes" class="ui selection dropdown" multiple>
               <option value="" disabled selected>Select your option</option>
               <option value="CSCE-110">CSCE-110</option>
               <option value="CSCE-111">CSCE-111</option>
@@ -101,29 +106,31 @@
               <option value="CSCE-314">CSCE-314</option>
               <option value="CSCE-315">CSCE-315</option>
             </select>
+            <%#= select("post", "csce_classes", csce_classes, {:multiple => true, :id => 'multi-select', :class => 'ui selection dropdown'})%>
 
+            <%#= select("post", "csce_classes", csce_classes, {multiple = true})%>
 
             <h4 class="ui dividing header">Documents To Upload</h4>
 
-            <div class="ui three required fields">
+
 <!--              <div class="field">-->
 <!--                <label>Resume (.pdf)</label>-->
 <!--                <input type="file" name="resume" placeholder="First Name" accept=".pdf">-->
 <!--              </div>-->
               <div class="field">
                 <label>Transcript (.pdf)</label>
-                <input type="file" name="transcript" placeholder="Last Name" accept=".pdf">
+                <input type="text" name="transcript" placeholder="Google Drive link of your transcript">
+              </div>
+              <div class="field">
+                <label>Resume (.pdf)</label>
+                <input type="text" name="resume" placeholder="Google Drive link of your resume">
               </div>
               <div class="field">
                 <label>Schedule (.txt)</label>
-                <input type="file" name="schedule" placeholder="Last Name" accept=".txt">
-              </div>
-              <div class="field">
-                <%= label_tag :resume %>
-                <%= file_field_tag :resume %>
+                <input type="text" name="schedule" placeholder="Google Drive link of your schedule">
               </div>
 
-            </div>
+
 
             <h4 class="ui dividing header">Additional Comment</h4>
             <div class="field">
@@ -131,7 +138,7 @@
               <label></label>
               <textarea name="comment"></textarea>
             </div>
-            <button class="ui button" type="submit">Submit</button>
+            <button class="ui centered big bg-maroon button" type="submit">Submit</button>
 
             <!-- End of from -->
         <% end %>

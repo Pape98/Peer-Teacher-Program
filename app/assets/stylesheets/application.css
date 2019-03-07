@@ -14,3 +14,7 @@
  *= require_self
  */
 
+ .maroon-button {
+    background: #500000 !important;
+    color: white !important;
+}

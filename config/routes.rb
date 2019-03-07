@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   get '/people', :to => 'welcome#people'
   get '/confirm-account', :to => 'welcome#confirm'
   get '/instructions', :to => 'welcome#instructions'
-  get '/view/app-status', :to => 'welcome#view_status'
+  get '/view/app-status', :to => 'welcome#view_app_status'
+  post'/view/app-status', :to => 'welcome#get_app_status'
 
   # ------------ LOGIN CONTROLLER -----------
   get '/login', :to => 'login#login_page'
@@ -23,7 +24,6 @@ Rails.application.routes.draw do
 # ------------ ADMINS CONTROLLER -----------
   get '/admin/home', :to => 'admins#home'
   get '/admin/applications', :to => 'admins#show_applications'
-  get '/admin/applications/:id/delete', :to => 'admins#delete_applicant'
   get '/admin/applications/:id', :to => 'admins#show_one_app'
   get '/admin/documents', :to => 'admins#documents'
   get '/admin/settings', :to => 'admins#settings'

@@ -15,18 +15,12 @@ class ApplicationsController < ApplicationController
         :graduation_date,
         :gpa,
 				:major,
-				:csce_class,
-	    	:comment
-      # :resume,
-      # :transcript,
-      # :schedule
+				:csce_classes,
+	    	:comment,
+        :resume,
+        :transcript,
+        :schedule
 		)
-
-		# #School Information
-		# t.string  :major
-		# t.string  :csce_class
-		# #Addtional Information
-		# t.text    :comment
 	end
 
 	def new
@@ -37,10 +31,12 @@ class ApplicationsController < ApplicationController
 	end
 
 	def create
+		# render plain:"#{params}"
 		@applicant = Applicant.create!(applicant_params)
 
 		session[:success] = "Thank your four submission, #{@applicant.first_name}! Your application has successfully been created and submitted."
-		redirect_to url_for(:controller => 'welcome', :action => 'view_status')
+		redirect_to url_for(:controller => 'welcome', :action => 'view_app_status')
+		# render plain: "#{Applicant.find(@applicant.id).csce_classes}"
 	end
 
 	def update
@@ -73,5 +69,4 @@ class ApplicationsController < ApplicationController
 		end
 		redirect_to request.referrer
 	end
-
 end

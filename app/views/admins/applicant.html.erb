@@ -17,7 +17,7 @@
     <%end %>
     <div class="ui center aligned container">
       <h2 class="ui icon header">
-        <i class="circular maroonyellow user  icon"></i>
+        <i class="circular user  icon"></i>
         <div class="content">
           <%=@applicant.first_name %> <%=@applicant.last_name %>
           <div class="sub header">All of the applications are located here. Click on 'View' to look at an individual one.</div>
@@ -64,11 +64,11 @@
             </tr>
             <tr>
               <td>Grade Point Average</td>
-              <td><%=@applicant.email %></td>
+              <td><%=@applicant.gpa %></td>
             </tr>
             <tr>
               <td>Graduation Year</td>
-              <td><%=@applicant.phone_number %></td>
+              <td><%=@applicant.graduation_date %></td>
             </tr>
             </tbody>
           </table>
@@ -99,7 +99,7 @@
       </div>
       <div class="row">
         <div class="ui center aligned  column ">
-          <object width="600" height="600" data="https://www.scholarshipgold.com/wp-content/uploads/2014/03/Sample-Transcript.pdf"></object>
+          <iframe width="600" height="600" src="<%=@applicant.transcript %>"></iframe>
         </div>
       </div>
       <div class="row">
@@ -109,7 +109,7 @@
       </div>
       <div class="row">
         <div class="ui center aligned  column ">
-          <object width="600" height="600" data="https://writing.colostate.edu/guides/documents/resume/functionalSample.pdf"></object>
+          <iframe width="600" height="600" src="<%=@applicant.schedule%>"></iframe>
         </div>
       </div>
       <div class="row">
@@ -119,7 +119,7 @@
       </div>
       <div class="row">
         <div class="ui center aligned  column ">
-          <object width="600" height="600" data="https://writing.colostate.edu/guides/documents/resume/functionalSample.pdf"></object>
+          <iframe src="<%=@applicant.resume %>" width="600" height="600"></iframe>
         </div>
       </div>
 
@@ -128,7 +128,7 @@
   <div class="ui container center aligned three wide column" >
     <div class="ui sticky two">
       <a class="item"href="/admin/applications">
-        <div class="ui  maroon animated button" tabindex="0">
+        <div class="ui animated button maroon-button" tabindex="0">
           <div class="visible content">Return to Applications</div>
           <div class="hidden content">
             <i class="left arrow icon"></i>
@@ -144,7 +144,7 @@
 
         <div class="item">
           <a class="title">
-            <div class="ui maroon button">  <i class="dropdown icon"></i>Update Status</div>
+            <div class="ui button maroon-button">  <i class="dropdown icon"></i>Update Status</div>
           </a>
           <div class=" content">
             <a class="item"><div class="ui divider"></div></a>

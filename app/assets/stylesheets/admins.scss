@@ -9,3 +9,20 @@
 #return:hover{
   background:lightgray;
 }
+.top-nav-bar{
+  background: #500000 !important;
+  border-radius: 0 !important;
+}
+.second-nav-bar{
+  background: #D6D3C4 !important;
+  border-radius: 0;
+  border: 0;
+}
+.active-dark{
+  background: rgba(0, 0, 0, 0.15) !important;
+}
+.circular{
+  color: #D6D3C4;
+  background: #500000;
+  box-shadow: 0em 0em 0em 0.08em rgba(214, 211, 196, 1) !important;
+}

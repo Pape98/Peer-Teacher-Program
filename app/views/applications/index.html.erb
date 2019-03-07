@@ -9,6 +9,8 @@
     <th>graduation_date</th>
     <th>gpa</th>
     <th>Status</th>
+    <th>Classes</th>
+    <th></th>
   </tr>
 <% @applicants.each_with_index do |applicant, i| %>
   <tr>
@@ -20,6 +22,7 @@
     <td><%= applicant.graduation_date %></td>
     <td><%= applicant.gpa %></td>
     <td><%= applicant.status %></td>
+    <td><%= applicant.csce_classes %></td>
     <td><%= link_to "Delete", application_path(applicant), method: "delete" %></td>
   </tr>
 <% end %>

@@ -8,7 +8,7 @@ $( document ).ready(function() {
 
     $('.ui.sticky.two').sticky({
         context: '#context',
-        offset:100,
+        offset:140,
         jitter:0
     });
 

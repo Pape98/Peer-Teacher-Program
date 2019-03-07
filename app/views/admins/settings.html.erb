@@ -1,7 +1,7 @@
 <%= render 'adminMenu' %>
 <div class="ui center aligned container" style="margin:40px 0 40px 0">
   <h2 class="ui icon header">
-    <i class="circular maroonyellow wrench icon"></i>
+    <i class="circular wrench icon"></i>
     <div class="content">
       Settings
       <div class="sub header"></div>
@@ -15,8 +15,14 @@
     <h2>Add administrators</h2>
       <p>Can add adminstrators </p>
     </div>
-    <div class="eight wide column">
-
+    <div class="ten wide column">
+      <div class="ui placeholder segment">
+        <div class="ui icon header">
+          <i class="pdf file outline icon"></i>
+          No documents are listed for this customer.
+        </div>
+        <div class="ui bg-maroon button">Add Document</div>
+      </div>
     </div>
   </div>
 
@@ -31,7 +37,7 @@
       <h2>Password</h2>
       <p>Can add adminstrators </p>
     </div>
-    <div class="eight wide column">
+    <div class="ten wide column">
       <form action="" class="ui form">
           <div class="field">
             <label>Current Password</label>
@@ -46,7 +52,7 @@
           <input type="text" name="last-name" placeholder="Last Name">
         </div>
 
-          <button class="ui button" type="submit">Submit</button>
+          <button class="ui bg-maroon button" type="submit">Submit</button>
       </form>
     </div>
   </div>
