@@ -16,18 +16,19 @@ RSpec.describe WelcomeController, type: :controller do
     end
   end
 
-  describe "GET people" do
-    it "assigns 'people' as @page" do
-      get :people
-      assigns(:page).should eq('people')
-    end
-  end
-
   describe "GET instructions" do
     it "assigns 'instructions' as @page" do
       get :instructions
       assigns(:page).should eq('instructions')
     end
+  end
+
+  describe "GET view_status" do
+    it "renders the status page and updates the status" do
+      get :view_status
+      assert_template :status
+    end
+
   end
 
 

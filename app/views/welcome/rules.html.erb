@@ -3,7 +3,7 @@
     
     <%= render 'landingMenu' %>
 
-    <%= image_tag("peer-teachers-web.jpg", alt: "Peer Teachers" , class:"jumbotron" )%>
+    <%= image_tag("csce2.jpg", alt: "Peer Teachers" , class:"jumbotron" )%>
 
 
     <div class="ui breadcrumb">
@@ -11,91 +11,104 @@
      <span class="divider">/</span>
      <span class="active section"><b>Rules & Logistics</b></span>
    </div>
- 
 
-   <div class="ui container" style="margin-top: 30px !important;">
-      <h2 class="ui header">
-      <i class="clock icon"></i>
-      <div class="content">
-        Hours Worked
+
+
+    <div class="ui container">
+      <div class="ui grid">
+        <div class="twelve wide stretched column">
+          <div class="ui segment">
+            <div class="ui active tab" data-tab="hours-worked">
+              <h2 class="ui header">
+                <i class="clock icon"></i>
+                <div class="content">
+                  Hours Worked
+                </div>
+              </h2>
+              <ul>
+                <li><p>Each PT has an allocated maximum numbers of hours to work per week. This is 10hrs for a full time PT working in lab sections, office hours, and Piazza, but could be more or less based on circumstances. If you are not sure what your hours are or if you would like to change your semester schedule notify Dr. Leyk. If you are unable to make your lab or office hours in a given week (i.e. career fair or interview) and need to reschedule them, also notify the course professor and Dr. Leyk of this. All PT schedules can be found on the departmental website at http://pt.cs.tamu.edu</p></li>
+                <li><p>
+                  Peer Teaching is an hourly position. That means you will be paid for actual hours worked, not necessarily for the maximum hours allocated. For example, if your are hired for “up to 10hrs per week”, but only work 7hrs in a week, you can only claim the 7hrs. Claiming more hours than actually worked constitutes fraud against the State of Texas, and is a very serious matter.
+                </p></li>
+                <li><p>
+                  Actual hours you may work is ultimately determined by need. If you plan to have a supplemental instruction session every Wednesday night, but there are no students who need extra help that week, cancel the session and notify the students and professor. If you are not sure about how to handle the situation speak with your professor and he or she will assist you or Dr. Leyk.
+                </p></li>
+                <li><p>
+                  Making up hours: If you are not sure what your hours are or if you would like to change your semester schedule notify Dr. Leyk. If you are unable to make your lab or office hours in a given week (i.e. career fair, interview, sickness, etc.) and need to reschedule them, also notify the course professor, the TA(s), and Dr. Leyk of this.
+                </p></li>
+                <li><p>
+                  Working more hours: If you on a regular basis, want to work more than 10 hours a week this time needs to be approved by the department head.
+                </p></li>
+              </ul>
+            </div>
+            <div class="ui tab" data-tab="duties">
+              <h2 class="ui header">
+                <i class="clock icon"></i>
+                <div class="content">
+                  Duties
+                </div>
+              </h2>
+
+              <ul>
+                <li><p>
+                  The primary duty of PTs is to help students understand the material and skills taught in class and lab. This can be done in lab session, online through Piazza, or in supplemental instruction sessions arranged between the Professor, the PT, and the students.
+                </p></li>
+                <li><p> PTs should support a professional demeanor:
+                  <ul>
+                    <li><p>Be proactive in helping students with their work</p></li>
+                <li><p>Answer as many questions as you can</p></li>
+                <li><p>Periodically ask around if there are any questions in the room</p></li>
+                <li><p>Refrain from rude behavior and comments, especially regarding student performance</p></li>
+                <li><p>Do not be distracted by your own work, reading, discussions, etc.</p></li>
+              </ul>
+              </p></li>
+              <li><p>
+                PTs should move around the room and help students without being asked.
+              </p></li>
+              <li><p>
+                They should also be proactive in giving feedback to the professor or TAs and filling out the biweekly survey online.
+              </p></li>
+              <li><p> Helping students does not mean doing their programming or assignments for them. Sometimes this is a difficult distinction. Here are some hints for when the student has a problem:
+                <ul>
+                  <li><p>Ask the student how he/she thinks the problem should be approached, then ask questions and make suggestions to guide the student to the right procedure.</p></li>
+              <li><p>Encourage students to read the assigned text outside of lab or tell them where to find practice problem or useful readings online.</p></li>
+              <li><p>Remember: sometimes it is clear that the student is completely lost or frustrated. In this situation, telling the student to read the book may not be helpful, so it would be better to explain and demonstrate a similar problem. Use your own judgment here.</p></li>
+              <li><p>Be supportive: complement students on what they do know or have done right before explaining what they need to learn or have done wrong.</p></li>
+              <li><p>When helping students with programming problems: do not write the entire assignment for the student. It is much easier to show then to tell, but the student will have a hard time working independently if you do too much work for them. They will rely too much on you, instead of making progress on their own</p></li>
+              <li><p>If the professor or TA has not started a Piazza message board for the course you should suggest that they do so. Remember to inform the students in lab of Piazza.</p></li>
+              </ul>
+              </p></li>
+              <li><p>If you are scheduled for office hours, but there is noone needing your help use this time to answer questions or start discussions on assignments on Piazza.</p></li>
+              <li><p>Speak with your Professor to make sure that you understand what your duties include. PT may be required to attend regular planning meetings with the professor and/or TA or review sessions. Remember that attendance at planning sessions and reviews are part of your job and are paid hours, so be sure to include them on your timesheets.</p></li>
+              </ul>
+            </div>
+            <div class="ui tab" data-tab="timesheets">
+              <h2 class="ui header">
+                <i class="clock icon"></i>
+                <div class="content">
+                  Timesheets and Logbooks
+                </div>
+              </h2>
+
+              <ul>
+                <li><p>Timesheets are done in the SSO portal in Howdy and due every two weeks.</p></li>
+                <li><p>Remember that your timesheet must reflect the actual hours you worked that week, not the hours you regularly work.</p></li>
+                <li><p>If you have questions do not hesitate to ask.</p></li>
+                <li><p>Peer teachers are required to complete a survey for each pay period. This can be found online. The information entered is automatically added to a spreadsheet for easy access. This system was found to be an efficient and useful source for student information and peer teacher accountability. The responses from this survey have been provided to instructors of the courses monitored by the peer teaching program.</p></li>
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="four wide column">
+          <div class="ui vertical fluid right tabular menu">
+            <a class="active item" data-tab="hours-worked">Hours Worked</a>
+            <a class="item" data-tab="duties">Duties</a>
+            <a class="item" data-tab="timesheets">timesheets</a>
+          </div>
+
+        </div>
       </div>
-    </h2>
-      <ul>
-        <li><p>Each PT has an allocated maximum numbers of hours to work per week. This is 10hrs for a full time PT working in lab sections, office hours, and Piazza, but could be more or less based on circumstances. If you are not sure what your hours are or if you would like to change your semester schedule notify Dr. Leyk. If you are unable to make your lab or office hours in a given week (i.e. career fair or interview) and need to reschedule them, also notify the course professor and Dr. Leyk of this. All PT schedules can be found on the departmental website at http://pt.cs.tamu.edu</p></li>
-        <li><p>
-          Peer Teaching is an hourly position. That means you will be paid for actual hours worked, not necessarily for the maximum hours allocated. For example, if your are hired for “up to 10hrs per week”, but only work 7hrs in a week, you can only claim the 7hrs. Claiming more hours than actually worked constitutes fraud against the State of Texas, and is a very serious matter.
-        </p></li>
-        <li><p>
-          Actual hours you may work is ultimately determined by need. If you plan to have a supplemental instruction session every Wednesday night, but there are no students who need extra help that week, cancel the session and notify the students and professor. If you are not sure about how to handle the situation speak with your professor and he or she will assist you or Dr. Leyk.
-        </p></li>
-        <li><p>
-          Making up hours: If you are not sure what your hours are or if you would like to change your semester schedule notify Dr. Leyk. If you are unable to make your lab or office hours in a given week (i.e. career fair, interview, sickness, etc.) and need to reschedule them, also notify the course professor, the TA(s), and Dr. Leyk of this.
-        </p></li>
-        <li><p>
-          Working more hours: If you on a regular basis, want to work more than 10 hours a week this time needs to be approved by the department head.
-        </p></li>
-      </ul>
-
-
-      
-    <h2 class="ui header">
-      <i class="clock icon"></i>
-      <div class="content">
-        Duties
-      </div>
-    </h2>
-
-    <ul>
-      <li><p>
-        The primary duty of PTs is to help students understand the material and skills taught in class and lab. This can be done in lab session, online through Piazza, or in supplemental instruction sessions arranged between the Professor, the PT, and the students.
-      </p></li>
-      <li><p> PTs should support a professional demeanor:
-        <ul>
-          <li><p>Be proactive in helping students with their work</p></li>
-          <li><p>Answer as many questions as you can</p></li>
-          <li><p>Periodically ask around if there are any questions in the room</p></li>
-          <li><p>Refrain from rude behavior and comments, especially regarding student performance</p></li>
-          <li><p>Do not be distracted by your own work, reading, discussions, etc.</p></li>
-        </ul>
-      </p></li>
-      <li><p>
-        PTs should move around the room and help students without being asked.
-      </p></li>
-      <li><p>
-        They should also be proactive in giving feedback to the professor or TAs and filling out the biweekly survey online.
-      </p></li>
-      <li><p> Helping students does not mean doing their programming or assignments for them. Sometimes this is a difficult distinction. Here are some hints for when the student has a problem:
-        <ul>
-          <li><p>Ask the student how he/she thinks the problem should be approached, then ask questions and make suggestions to guide the student to the right procedure.</p></li>
-          <li><p>Encourage students to read the assigned text outside of lab or tell them where to find practice problem or useful readings online.</p></li>
-          <li><p>Remember: sometimes it is clear that the student is completely lost or frustrated. In this situation, telling the student to read the book may not be helpful, so it would be better to explain and demonstrate a similar problem. Use your own judgment here.</p></li>
-          <li><p>Be supportive: complement students on what they do know or have done right before explaining what they need to learn or have done wrong.</p></li>
-          <li><p>When helping students with programming problems: do not write the entire assignment for the student. It is much easier to show then to tell, but the student will have a hard time working independently if you do too much work for them. They will rely too much on you, instead of making progress on their own</p></li>
-          <li><p>If the professor or TA has not started a Piazza message board for the course you should suggest that they do so. Remember to inform the students in lab of Piazza.</p></li>
-        </ul>
-      </p></li>
-      <li><p>If you are scheduled for office hours, but there is noone needing your help use this time to answer questions or start discussions on assignments on Piazza.</p></li>
-      <li><p>Speak with your Professor to make sure that you understand what your duties include. PT may be required to attend regular planning meetings with the professor and/or TA or review sessions. Remember that attendance at planning sessions and reviews are part of your job and are paid hours, so be sure to include them on your timesheets.</p></li>
-    </ul>
-
-     <h2 class="ui header">
-      <i class="clock icon"></i>
-      <div class="content">
-        Timesheets and Logbooks
-      </div>
-    </h2>
-
-    <ul>
-      <li><p>Timesheets are done in the SSO portal in Howdy and due every two weeks.</p></li>
-      <li><p>Remember that your timesheet must reflect the actual hours you worked that week, not the hours you regularly work.</p></li>
-      <li><p>If you have questions do not hesitate to ask.</p></li>
-      <li><p>Peer teachers are required to complete a survey for each pay period. This can be found online. The information entered is automatically added to a spreadsheet for easy access. This system was found to be an efficient and useful source for student information and peer teacher accountability. The responses from this survey have been provided to instructors of the courses monitored by the peer teaching program.</p></li>
-    </ul>
-    
-
-   </div>
-    
-
-
-
+    </div>
    	<%= render 'landingFooter' %>

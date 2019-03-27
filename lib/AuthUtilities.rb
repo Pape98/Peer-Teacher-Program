@@ -32,7 +32,7 @@ module AuthUtilities
 	#Make sure you catch any errors from JWT.decode
 	def decodeJWT token	
 		decoded_token = JWT.decode token, RSA_PUBLIC, true, { algorithm: 'RS256' }
-		return decoded_token
+		return decoded_token[0]
 	end
 
 

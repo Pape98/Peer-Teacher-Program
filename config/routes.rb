@@ -27,4 +27,11 @@ Rails.application.routes.draw do
   get '/admin/applications/:id', :to => 'admins#show_one_app'
   get '/admin/documents', :to => 'admins#documents'
   get '/admin/settings', :to => 'admins#settings'
+
+
+  post '/addAdmin', :to => 'admins#add_admin'
+  post '/deleteAdmin', :to => 'admins#delete_admin'
+  post '/changePassword', :to => 'admins#change_password'
+
+
 end

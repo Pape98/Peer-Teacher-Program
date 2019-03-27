@@ -14,7 +14,11 @@ applications = [
                       Pellentesque pharetra magna vel sapien ullamcorper, rhoncus consequat felis maximus. Fusce elementum risus quis molestie egestas. Curabitur commodo augue nec
                       nulla efficitur, ac molestie lacus tempor. Phasellus lacinia ultrices pellentesque. Proin ultricies augue metus, a dignissim urna feugiat a. Nulla malesuada semper egestas.
                       Donec pellentesque, nibh eget auctor viverra, tellus velit gravida dolor, vel molestie quam magna ac ex. Nullam cursus ligula in rhoncus aliquet.
-                      ', :major => 'Computer Engineering', :status => 0
+                      ', :major => 'Computer Engineering', :status => 0,
+                        :resume => "https://drive.google.com/file/d/1eXybu6q4rQ0Si2Kd0kIbKibW5Vo7yBDg/preview",
+                        :transcript=> "https://drive.google.com/file/d/1eXybu6q4rQ0Si2Kd0kIbKibW5Vo7yBDg/preview",
+                        :schedule => "https://drive.google.com/file/d/17dM1-G0PZfn9hvUzMFVpQ4S-1XWxlnBu/preview",
+                        :picture => "https://drive.google.com/file/d/1pwrAKKsCcxKFKG_jgCEUMqUFGiyCcRuB/preview"
                 },
                 {
                     :first_name => 'James', :last_name => 'Quinn', :email => 'JamesSQuinn@armyspy.com', :uin => '964540968', :phone_number => '954-525-6935',
@@ -23,7 +27,12 @@ applications = [
                       Pellentesque pharetra magna vel sapien ullamcorper, rhoncus consequat felis maximus. Fusce elementum risus quis molestie egestas. Curabitur commodo augue nec
                       nulla efficitur, ac molestie lacus tempor. Phasellus lacinia ultrices pellentesque. Proin ultricies augue metus, a dignissim urna feugiat a. Nulla malesuada semper egestas.
                       Donec pellentesque, nibh eget auctor viverra, tellus velit gravida dolor, vel molestie quam magna ac ex. Nullam cursus ligula in rhoncus aliquet.
-                      ', :major => 'Computer Science', :status => 0
+                      ', :major => 'Computer Science', :status => 0,
+                    :resume => "https://drive.google.com/file/d/1eXybu6q4rQ0Si2Kd0kIbKibW5Vo7yBDg/preview",
+                    :transcript=> "https://drive.google.com/file/d/1eXybu6q4rQ0Si2Kd0kIbKibW5Vo7yBDg/preview",
+                    :schedule => "https://drive.google.com/file/d/17dM1-G0PZfn9hvUzMFVpQ4S-1XWxlnBu/preview",
+                    :picture => "https://drive.google.com/file/d/1pwrAKKsCcxKFKG_jgCEUMqUFGiyCcRuB/preview"
+
                 },
                 {
                     :first_name => 'Jean', :last_name => 'Long', :email => 'JeanKLong@armyspy.com', :uin => '192904631',:phone_number => '228-889-9309',
@@ -32,7 +41,12 @@ applications = [
                       Pellentesque pharetra magna vel sapien ullamcorper, rhoncus consequat felis maximus. Fusce elementum risus quis molestie egestas. Curabitur commodo augue nec
                       nulla efficitur, ac molestie lacus tempor. Phasellus lacinia ultrices pellentesque. Proin ultricies augue metus, a dignissim urna feugiat a. Nulla malesuada semper egestas.
                       Donec pellentesque, nibh eget auctor viverra, tellus velit gravida dolor, vel molestie quam magna ac ex. Nullam cursus ligula in rhoncus aliquet.
-                      ',  :major => 'Computer Science', :status => 2
+                      ',  :major => 'Computer Science', :status => 2,
+                    :resume => "https://drive.google.com/file/d/1eXybu6q4rQ0Si2Kd0kIbKibW5Vo7yBDg/preview",
+                    :transcript=> "https://drive.google.com/file/d/1eXybu6q4rQ0Si2Kd0kIbKibW5Vo7yBDg/preview",
+                    :schedule => "https://drive.google.com/file/d/17dM1-G0PZfn9hvUzMFVpQ4S-1XWxlnBu/preview",
+                    :picture => "https://drive.google.com/file/d/1pwrAKKsCcxKFKG_jgCEUMqUFGiyCcRuB/preview"
+
                 },
                 {
                     :first_name => 'Matthew', :last_name => 'Williams', :email => 'MatthewHWilliams@teleworm.us', :uin => '614854151',:phone_number => '',
@@ -41,7 +55,13 @@ applications = [
                       Pellentesque pharetra magna vel sapien ullamcorper, rhoncus consequat felis maximus. Fusce elementum risus quis molestie egestas. Curabitur commodo augue nec
                       nulla efficitur, ac molestie lacus tempor. Phasellus lacinia ultrices pellentesque. Proin ultricies augue metus, a dignissim urna feugiat a. Nulla malesuada semper egestas.
                       Donec pellentesque, nibh eget auctor viverra, tellus velit gravida dolor, vel molestie quam magna ac ex. Nullam cursus ligula in rhoncus aliquet.
-                      ', :major => 'Computer Engineering', :status => 1
+                      ', :major => 'Computer Engineering', :status => 1,
+                    :resume => "https://drive.google.com/file/d/1eXybu6q4rQ0Si2Kd0kIbKibW5Vo7yBDg/preview",
+                    :transcript=> "https://drive.google.com/file/d/1eXybu6q4rQ0Si2Kd0kIbKibW5Vo7yBDg/preview",
+                    :schedule => "https://drive.google.com/file/d/17dM1-G0PZfn9hvUzMFVpQ4S-1XWxlnBu/preview",
+                    :picture => "https://drive.google.com/file/d/1pwrAKKsCcxKFKG_jgCEUMqUFGiyCcRuB/preview"
+
+
                 },
                 {
                     :first_name => 'Mike', :last_name => 'Fuhrmann', :email => 'MikeFuhrmann@teleworm.us', :uin => '769902369',:phone_number => '915-630-1283',
@@ -50,7 +70,12 @@ applications = [
                       Pellentesque pharetra magna vel sapien ullamcorper, rhoncus consequat felis maximus. Fusce elementum risus quis molestie egestas. Curabitur commodo augue nec
                       nulla efficitur, ac molestie lacus tempor. Phasellus lacinia ultrices pellentesque. Proin ultricies augue metus, a dignissim urna feugiat a. Nulla malesuada semper egestas.
                       Donec pellentesque, nibh eget auctor viverra, tellus velit gravida dolor, vel molestie quam magna ac ex. Nullam cursus ligula in rhoncus aliquet.
-                      ', :major => 'Computer Engineering', :status => 3
+                      ', :major => 'Computer Engineering', :status => 3,
+                    :resume => "https://drive.google.com/file/d/1eXybu6q4rQ0Si2Kd0kIbKibW5Vo7yBDg/preview",
+                    :transcript=> "https://drive.google.com/file/d/1eXybu6q4rQ0Si2Kd0kIbKibW5Vo7yBDg/preview",
+                    :schedule => "https://drive.google.com/file/d/17dM1-G0PZfn9hvUzMFVpQ4S-1XWxlnBu/preview",
+                    :picture => "https://drive.google.com/file/d/1pwrAKKsCcxKFKG_jgCEUMqUFGiyCcRuB/preview"
+
                 },
                 {
                     :first_name => 'Demi', :last_name => 'Burrows', :email => 'DemiBurrows@teleworm.us', :uin => '359415912',:phone_number => '320-303-2113',
@@ -59,7 +84,12 @@ applications = [
                       Pellentesque pharetra magna vel sapien ullamcorper, rhoncus consequat felis maximus. Fusce elementum risus quis molestie egestas. Curabitur commodo augue nec
                       nulla efficitur, ac molestie lacus tempor. Phasellus lacinia ultrices pellentesque. Proin ultricies augue metus, a dignissim urna feugiat a. Nulla malesuada semper egestas.
                       Donec pellentesque, nibh eget auctor viverra, tellus velit gravida dolor, vel molestie quam magna ac ex. Nullam cursus ligula in rhoncus aliquet.
-                      ',  :major => 'Computer Science', :status => 0
+                      ',  :major => 'Computer Science', :status => 0,
+                      :resume => "https://drive.google.com/file/d/1eXybu6q4rQ0Si2Kd0kIbKibW5Vo7yBDg/preview",
+                      :transcript=> "https://drive.google.com/file/d/1eXybu6q4rQ0Si2Kd0kIbKibW5Vo7yBDg/preview",
+                      :schedule => "https://drive.google.com/file/d/17dM1-G0PZfn9hvUzMFVpQ4S-1XWxlnBu/preview",
+                      :picture => "https://drive.google.com/file/d/1pwrAKKsCcxKFKG_jgCEUMqUFGiyCcRuB/preview"
+
                 },
                 {
                     :first_name => 'Evelyn', :last_name => 'Evelyn', :email => 'EvelynRodriguesOliveira@teleworm.us', :uin => '921041917',:phone_number => '802-408-4492',
@@ -68,7 +98,12 @@ applications = [
                       Pellentesque pharetra magna vel sapien ullamcorper, rhoncus consequat felis maximus. Fusce elementum risus quis molestie egestas. Curabitur commodo augue nec
                       nulla efficitur, ac molestie lacus tempor. Phasellus lacinia ultrices pellentesque. Proin ultricies augue metus, a dignissim urna feugiat a. Nulla malesuada semper egestas.
                       Donec pellentesque, nibh eget auctor viverra, tellus velit gravida dolor, vel molestie quam magna ac ex. Nullam cursus ligula in rhoncus aliquet.
-                      ', :major => 'Computer Science', :status => 2
+                      ', :major => 'Computer Science', :status => 2,
+                      :resume => "https://drive.google.com/file/d/1eXybu6q4rQ0Si2Kd0kIbKibW5Vo7yBDg/preview",
+                      :transcript=> "https://drive.google.com/file/d/1eXybu6q4rQ0Si2Kd0kIbKibW5Vo7yBDg/preview",
+                      :schedule => "https://drive.google.com/file/d/17dM1-G0PZfn9hvUzMFVpQ4S-1XWxlnBu/preview",
+                      :picture => "https://drive.google.com/file/d/1pwrAKKsCcxKFKG_jgCEUMqUFGiyCcRuB/preview"
+
                 },
 
               ]

@@ -33,8 +33,16 @@ $( document ).ready(function() {
 
     $('select.dropdown').dropdown();
     //---------------------------------------
+    $('.tabular.menu .item').tab({
+        alwaysRefresh : true
+    });
+
+    // //---------------------------------------
+
+    //$('.hourglass').transition('looping').transition({animation:'flash',duration:3000,interval:200});
+    $('.hourglass').transition('flash',8000)
 
 
-    //---------------------------------------
+
 
 });

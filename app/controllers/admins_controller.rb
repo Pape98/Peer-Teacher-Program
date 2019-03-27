@@ -1,6 +1,11 @@
+require 'AuthUtilities'
+
 class AdminsController < ApplicationController
 
+  include AuthUtilities
+
   before_action :set_applicants
+  helper_method :get_download_links
 
   def set_applicants
     @applicants = Applicant.all
@@ -30,6 +35,7 @@ class AdminsController < ApplicationController
   end
 
   def settings
+    @users = User.all
     make_tab_active 4
     render 'settings'
   end
@@ -59,5 +65,49 @@ class AdminsController < ApplicationController
       return 'orange'
     end
   end
+
+  def get_download_links url
+    index_start = url.index('d/') + 2
+    index_end = url.index('/preview') - 1
+    id = url[index_start..index_end]
+    new_url = 'https://drive.google.com/uc?export=download&id=' + id
+  end
+
+
+  skip_before_action :verify_authenticity_token
+
+  def add_admin
+    newUser = User.new(email: params[:email], password: params[:password], password_confirmation: params[:password_confirm], first_name: params[:first_name], last_name: params[:last_name])
+    newUser.save
+    settings
+  end
+
+  def delete_admin
+    User.delete params[:id]
+    settings
+  end
+
+
+
+  def change_password
+    token = decodeJWT session[:jwt]
+    currUser = User.find_by(email: token["email"])
+
+    if currUser && currUser.authenticate(params[:current_password]) 
+
+      currUser.password = params[:new_password]
+      currUser.password_confirmation = params[:confirm_new_password]
+      currUser.save
+      flash[:alert] = 'Password changed'
+      
+    else
+      flash[:alert] = 'Unable to change password'
+    end
+
+    settings
+  end
+
+
+
 
 end

@@ -7,10 +7,6 @@ class WelcomeController < ApplicationController
     @page ='rules'
   end
 
-  # def people
-  #   @page ='people'
-  # end
-
   def login
   end
 

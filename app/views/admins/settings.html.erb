@@ -12,17 +12,87 @@
 <div class="ui container stackable grid" style="max-width: 1000px !important;">
   <div class="row">
     <div class="five wide column">
-    <h2>Add administrators</h2>
-      <p>Can add adminstrators </p>
+    <h2>Manage Coordinators</h2>
+      <p>View and Delete Users Here</p>
     </div>
+
     <div class="ten wide column">
-      <div class="ui placeholder segment">
-        <div class="ui icon header">
-          <i class="pdf file outline icon"></i>
-          No documents are listed for this customer.
+
+
+
+      <table class="ui selectable very basic  striped table ">
+        <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <% @users.each do |user| %>
+        <tr>
+          <td><%= user.first_name %></td>
+          <td><%= user.last_name %></td>
+          <td><%= user.email %></td>
+          <td>
+            <form action="/deleteAdmin" method="post">
+              <input type="hidden" name="id" value=<%= user.id %>>
+              <button type="submit" class="ui basic red button">Delete</button>
+            </form>
+          </td>
+
+        <% end %>
+
+        </tbody>
+      </table>
+
+
+    </div>
+
+  </div>
+
+    <div class="row">
+     <div class="column">
+       <hr>
+     </div>
+    </div>
+
+
+  <div class="row">
+    <div class="five wide column">
+      <h2>Add Coordinator</h2>
+      <p>Add Users Here</p>
+    </div>
+
+
+    <div class="ten wide column">
+      <form action="/addAdmin" method="post" class="ui form">
+          <div class="field">
+            <label>Email</label>
+            <input type="text" name="email" placeholder="Email">
+          </div>
+          <div class="field">
+            <label>First Name</label>
+            <input type="text" name="first_name" placeholder="First Name">
+          </div>
+        <div class="field">
+          <label>Last Name</label>
+          <input type="text" name="last_name" placeholder="Last Name">
         </div>
-        <div class="ui bg-maroon button">Add Document</div>
-      </div>
+
+        <div class="field">
+          <label>Password</label>
+          <input type="password" name="password" placeholder="Password">
+        </div>
+
+        <div class="field">
+          <label>Confirm Password</label>
+          <input type="password" name="confirm_password" placeholder="Confirm Password">
+        </div>
+
+          <button class="ui bg-maroon button" type="submit">Submit</button>
+      </form>
     </div>
   </div>
 
@@ -35,21 +105,21 @@
   <div class="row">
     <div class="five wide column">
       <h2>Password</h2>
-      <p>Can add adminstrators </p>
+      <p>Change your password here</p>
     </div>
     <div class="ten wide column">
-      <form action="" class="ui form">
+      <form action="/changePassword" method="post" class="ui form">
           <div class="field">
             <label>Current Password</label>
-            <input type="text" name="first-name" placeholder="First Name">
+            <input type="password" name="current_password" placeholder="Current Password">
           </div>
           <div class="field">
             <label>New Password</label>
-            <input type="text" name="last-name" placeholder="Last Name">
+            <input type="password" name="new_password" placeholder="New Password">
           </div>
         <div class="field">
           <label>Confirm New Password</label>
-          <input type="text" name="last-name" placeholder="Last Name">
+          <input type="password" name="confirm_new_password" placeholder="Confirm Password">
         </div>
 
           <button class="ui bg-maroon button" type="submit">Submit</button>
@@ -64,8 +134,7 @@
   </div>
   <div class="row">
     <div class="five wide column">
-      <h2>Add administrators</h2>
-      <p>Can add adminstrators </p>
+
     </div>
     <div class="eight wide column">
 

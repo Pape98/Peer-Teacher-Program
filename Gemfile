@@ -85,6 +85,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'rails-controller-testing'
+  gem "factory_bot_rails"
+
 end
 
 #Added for Cucumber testing - DL

@@ -17,7 +17,9 @@
     <%end %>
     <div class="ui center aligned container">
       <h2 class="ui icon header">
-        <i class="circular user  icon"></i>
+        <div>
+          <iframe  style="border: 6px solid #500000;" src="<%=@applicant.picture %>"  frameborder="0" height="250" width="250" alt=""></iframe>
+        </div>
         <div class="content">
           <%=@applicant.first_name %> <%=@applicant.last_name %>
           <div class="sub header">All of the applications are located here. Click on 'View' to look at an individual one.</div>
@@ -167,13 +169,13 @@
       <div class="ui divider"></div>
       <h4>Download File</h4>
       <div class="ui secondary vertical menu">
-        <a class="item">
+        <a href="<%=get_download_links(@applicant.resume)%>" class="item">
           Resume
         </a>
-        <a class="item">
+        <a href="<%=get_download_links(@applicant.transcript)%>" class="item">
           Transcript
         </a>
-        <a class="item">
+        <a href="<%=get_download_links(@applicant.schedule)%>" class="item">
           Schedule
         </a>
 
