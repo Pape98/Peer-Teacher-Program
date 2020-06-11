@@ -9,7 +9,7 @@ module AuthUtilities
 	def authUserCreds email, password
 		user = User.find_by(email: email)
 
-		if user && user.authenticate(password) 
+		if user && user.authenticate(password)
 		  return user
 		else
 		  raise Exceptions::AuthenticationError
@@ -30,7 +30,7 @@ module AuthUtilities
 
 	#Cracks open the JWT so we can consume it's flesh
 	#Make sure you catch any errors from JWT.decode
-	def decodeJWT token	
+	def decodeJWT token
 		decoded_token = JWT.decode token, RSA_PUBLIC, true, { algorithm: 'RS256' }
 		return decoded_token[0]
 	end
@@ -46,7 +46,7 @@ module AuthUtilities
 			flash[:alert] = 'Session expired'
 			redirect_to login_path
 		rescue
-			flash[:alert] = 'Please login'
+			flash[:alert] = 'Please login to access page'
 			redirect_to login_path
 		end
 	end

@@ -13,6 +13,13 @@ Rails.application.routes.draw do
   # ------------ LOGIN CONTROLLER -----------
   get '/login', :to => 'login#login_page'
   post '/loginUser', :to => 'login#login'
+  get '/resetPassword', :to => 'login#reset_page'
+  post '/reset', :to => 'login#reset'
+  get '/loading', :to => 'login#loader'
+
+  get '/signout', :to => 'login#signout'
+
+
 
   # ------------ AUTH CONTROLLER -------------
   get 'auth' => 'auth#index'
@@ -20,6 +27,7 @@ Rails.application.routes.draw do
 # ------------ APPLICATION CONTROLLER ----------- 
   resources :applications
   get '/admin/applications/:id/:code', :to => 'applications#change_status'
+  post '/admin/applications/:id/comment' , :to => 'applications#comment'
 
 # ------------ ADMINS CONTROLLER -----------
   get '/admin/home', :to => 'admins#home'

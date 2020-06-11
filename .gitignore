@@ -31,3 +31,4 @@
 /config/master.key
 
 echo "coverage" >> .gitignore
+sendgrid.env
